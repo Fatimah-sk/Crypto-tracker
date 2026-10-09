@@ -1,0 +1,418 @@
+/* ===== Base ===== */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e8eefc;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8eefc;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Select ===== */
+.select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #86868c;
+  cursor: pointer;
+}
+
+/* ===== Search ===== */
+.controls input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8eefc;
+  width: 260px;
+  max-width: 60vw;
+}
+
+.controls input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Status ===== */
+.status {
+  margin: 10px 0 14px;
+  opacity: 0.9;
+}
+
+/* ===== Error box ===== */
+.errorbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 107, 107, 0.08);
+  margin-bottom: 12px;
+}
+
+/* ===== Table ===== */
+.table-wrap {
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+th {
+  font-size: 12px;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Coin cell ===== */
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.sym {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ===== Price change colors ===== */
+.pos {
+  color: #33d17a;
+  font-weight: 700;
+}
+
+.neg {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+/* ===== Favorite star ===== */
+.star {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffd166;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.star:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Last updated ===== */
+#updated {
+  opacity: 0.85;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 18px;
+  padding: 16px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+.footer .small {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-card {
+  width: min(900px, 95vw);
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mLogo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.mName {
+  font-weight: 800;
+}
+
+.mSub {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.chart-wrap {
+  height: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+}
+
+/* ===== Skeleton ===== */
+.sk {
+  height: 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.sk::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.sk-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.sk-num {
+  width: 80px;
+}
+
+.sk-text {
+  width: 240px;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .container {
+    padding: 12px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .controls {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .controls .select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .controls input {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: 90dvh;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .modal-header {
+    flex-wrap: wrap;
+  }
+
+  .modal-actions {
+    flex-wrap: wrap;
+  }
+
+  .chart-wrap {
+    height: 240px;
+  }
+
+  .errorbox {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .controls .select {
+    flex: 1 1 100%;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-actions {
+    justify-content: space-between;
+  }
+
+  .chart-wrap {
+    height: 210px;
+  }
+}
+
+
+
+
+
+
+
+
