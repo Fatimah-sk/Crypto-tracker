@@ -1,4 +1,4 @@
-![Crypto Tracker Preview](./public/crypto-tracker.png)
+![Crypto Tracker Preview](./image.png)
 
 # Crypto Tracker 📈
 
